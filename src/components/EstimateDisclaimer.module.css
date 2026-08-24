@@ -1,0 +1,18 @@
+.disclaimer {
+  padding: var(--space-20) var(--space-24);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-lifted);
+}
+
+.title {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-bold);
+}
+
+.text {
+  margin-top: var(--space-4);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base);
+}

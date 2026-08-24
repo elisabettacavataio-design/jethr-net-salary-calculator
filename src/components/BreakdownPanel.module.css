@@ -1,0 +1,169 @@
+.panel {
+  display: grid;
+  gap: var(--space-24);
+  padding: var(--space-32);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  font-size: var(--font-size-24);
+}
+
+.rows {
+  display: grid;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-16);
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.row:last-child {
+  border-bottom: 0;
+}
+
+.rowLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-8);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-16);
+}
+
+.rowLabelText {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.rowNote {
+  color: var(--color-ink-subtle);
+  font-size: var(--font-size-13);
+  line-height: var(--line-height-snug);
+}
+
+.rowAmount {
+  margin: 0;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.base .rowLabel,
+.base .rowAmount {
+  color: var(--color-ink);
+}
+
+.deduction .rowAmount {
+  color: var(--color-ink-secondary);
+}
+
+.addition .rowAmount {
+  color: var(--color-positive-strong);
+}
+
+.total {
+  margin-top: var(--space-8);
+  padding: var(--space-16);
+  border-bottom: 0;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-accent-soft);
+}
+
+.total .rowLabel {
+  color: var(--color-ink);
+  font-weight: var(--font-weight-semibold);
+}
+
+.total .rowAmount {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+}
+
+.details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-lifted);
+}
+
+.summary {
+  padding: var(--space-16);
+  color: var(--color-ink);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.detailsBody {
+  padding: 0 var(--space-16) var(--space-16);
+}
+
+.detailsTitle {
+  margin-top: var(--space-16);
+  margin-bottom: var(--space-4);
+  color: var(--color-ink-secondary);
+  font-size: var(--font-size-14);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: var(--space-20);
+  }
+
+  /* Keep label and amount on one line: the breakdown should read as a path,
+     not as a stack of loose values. Long labels wrap, amounts stay right. */
+  .row {
+    gap: var(--space-12);
+  }
+
+  .rowLabel {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: var(--font-size-14);
+  }
+
+  .rowAmount {
+    font-size: var(--font-size-14);
+  }
+
+  .total .rowAmount {
+    font-size: var(--font-size-20);
+  }
+
+  .total {
+    padding: var(--space-16);
+  }
+}
+
+/* Below this width a two-column row stops working: the label wraps, the amount
+   is pushed around and the alignment reads as broken. Change the structure
+   instead of shrinking it further — label above, amount below. */
+@media (max-width: 360px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .rowAmount,
+  .total .rowAmount {
+    font-size: var(--font-size-18);
+  }
+
+  .total .rowAmount {
+    font-size: var(--font-size-24);
+  }
+}

@@ -1,0 +1,26 @@
+.header {
+  display: grid;
+  gap: var(--space-12);
+  justify-items: start;
+}
+
+.context {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(var(--font-size-32), 6vw, var(--font-size-48));
+  max-width: 18ch;
+}
+
+.description {
+  margin-top: var(--space-4);
+  max-width: 52ch;
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-base);
+}

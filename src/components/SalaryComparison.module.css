@@ -1,0 +1,346 @@
+.comparison {
+  padding: var(--space-32);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  font-size: var(--font-size-24);
+}
+
+.subtitle {
+  margin-top: var(--space-4);
+  color: var(--color-ink-muted);
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-16);
+  margin-top: var(--space-24);
+}
+
+.field {
+  display: grid;
+  flex: 1 1 14rem;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-ink-secondary);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 var(--space-16);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-ink);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.inputWrapperError {
+  border-color: var(--color-critical);
+}
+
+.currency {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-12) 0;
+  border: 0;
+  background: transparent;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-bold);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-ink-subtle);
+  font-weight: var(--font-weight-medium);
+}
+
+.submit {
+  flex: 0 0 auto;
+  padding: var(--space-16) var(--space-32);
+  border: 1px solid var(--color-ink);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.submit:hover {
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+  color: var(--color-critical);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+}
+
+.errorIcon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.15rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-critical);
+  color: var(--color-surface);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.outcome {
+  margin-top: var(--space-32);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-border);
+}
+
+.outcomeTitle {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.headline {
+  margin-top: var(--space-12);
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: -0.01em;
+}
+
+.annual {
+  margin-top: var(--space-4);
+  color: var(--color-ink-secondary);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.marginal {
+  margin-top: var(--space-8);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-base);
+}
+
+/* ------------------------------------------------------------ table (wide) */
+.table {
+  width: 100%;
+  margin-top: var(--space-24);
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: var(--space-12) var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+  text-align: right;
+}
+
+.table thead th {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.table th:first-child,
+.table td:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 0;
+}
+
+.table tbody tr:last-child th,
+.table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.rowHeader {
+  color: var(--color-ink-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+.table tbody td {
+  color: var(--color-ink-muted);
+}
+
+/* The answer to the question is the delta, not the two scenarios: give that
+   column the weight, without turning the table into a colour chart. */
+.difference {
+  color: var(--color-ink);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-bold);
+}
+
+.table thead th:last-child {
+  color: var(--color-ink);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ---------------------------------------------------------- cards (narrow) */
+.cards {
+  display: none;
+  margin-top: var(--space-24);
+}
+
+.scenarioCards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-12);
+}
+
+.scenarioCard {
+  padding: var(--space-16);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface-muted);
+}
+
+.scenarioLabel {
+  margin-bottom: var(--space-8);
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.scenarioList {
+  display: grid;
+  gap: var(--space-8);
+  margin: 0;
+}
+
+.scenarioItem {
+  display: grid;
+  gap: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.scenarioItem dt {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-13);
+}
+
+.scenarioItem dd {
+  margin: 0;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+}
+
+.differenceCard {
+  margin-top: var(--space-12);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+}
+
+.differenceTitle {
+  margin-bottom: var(--space-12);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: #b9beb2;
+}
+
+.differenceCard .scenarioItem dt {
+  color: #b9beb2;
+}
+
+.differenceValue {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .comparison {
+    padding: var(--space-20);
+  }
+
+  .form {
+    align-items: stretch;
+  }
+
+  .field {
+    flex-basis: 100%;
+  }
+
+  .submit {
+    width: 100%;
+  }
+
+  .headline {
+    font-size: var(--font-size-20);
+  }
+
+  /* Below this width the delta matters more than a cell by cell comparison. */
+  .table {
+    display: none;
+  }
+
+  .cards {
+    display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .scenarioCards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

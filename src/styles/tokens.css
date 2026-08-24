@@ -1,0 +1,111 @@
+/*
+ * Design tokens extracted from the live Jet HR design system (jethr.com).
+ * Values were read from the site's computed styles, not eyeballed.
+ *
+ * This file is the only place where raw colours, sizes and radii are declared.
+ * Components must reference tokens, never literal values.
+ */
+
+:root {
+  /* ---------------------------------------------------------------- colour */
+  /* Ink — Jet HR's near-black primary */
+  --color-ink: #11150a;
+  --color-ink-strong: #0e1108;
+  --color-ink-secondary: #3f4340;
+  --color-ink-muted: #59615f;
+  --color-ink-subtle: #888a85;
+
+  /* Surfaces */
+  --color-surface: #ffffff;
+  --color-surface-muted: #f1f4f1;
+  --color-surface-sunken: #ecefec;
+  --color-surface-lifted: #fbfcfb;
+
+  /* Borders */
+  --color-border: #e0e6dc;
+  --color-border-strong: #cfd6cd;
+
+  /* Accent — Jet HR lime */
+  --color-accent: #dfeb57;
+  --color-accent-soft: #f6f9cf;
+
+  /* Support greens */
+  --color-positive: #b3e09c;
+  --color-positive-soft: #f0f9eb;
+  --color-positive-strong: #313a23;
+
+  /* Feedback */
+  --color-critical: #a4342a;
+  --color-critical-soft: #fbeeec;
+
+  /* Data visualisation — one segment per category of the composition bar */
+  --color-data-net: #dfeb57;
+  --color-data-taxes: #11150a;
+  --color-data-contributions: #888a85;
+
+  /* --------------------------------------------------------------- shadow */
+  --shadow-card: 0 1px 2px #11150a0a;
+  --shadow-raised: 0 8px 24px #11150a0f;
+  --shadow-accent: 0 2px 0 #c1c18680;
+
+  /* ------------------------------------------------------------ typography */
+  --font-family-base:
+    'Wix Madefor Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
+
+  --font-size-80: 5rem;
+  --font-size-64: 4rem;
+  --font-size-48: 3rem;
+  --font-size-40: 2.5rem;
+  --font-size-32: 2rem;
+  --font-size-28: 1.75rem;
+  --font-size-24: 1.5rem;
+  --font-size-20: 1.25rem;
+  --font-size-18: 1.125rem;
+  --font-size-16: 1rem;
+  --font-size-14: 0.875rem;
+  --font-size-13: 0.8125rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-base: 1.6;
+
+  --letter-spacing-label: 0.35px;
+
+  /* ---------------------------------------------------------------- space */
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+
+  /* --------------------------------------------------------------- radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 14px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+
+  /* --------------------------------------------------------------- layout */
+  --layout-max-width: 1000px;
+  --layout-gutter: 1.25rem;
+
+  /* ---------------------------------------------------------------- focus */
+  --focus-ring-width: 3px;
+  --focus-ring-color: #11150a;
+  --focus-ring-offset: 2px;
+}

@@ -1,0 +1,142 @@
+.form {
+  display: grid;
+  gap: var(--space-24);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.label {
+  color: var(--color-ink-secondary);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 var(--space-16);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--color-ink);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.inputWrapperError {
+  border-color: var(--color-critical);
+}
+
+.inputWrapperError:focus-within {
+  box-shadow: 0 0 0 3px var(--color-critical-soft);
+}
+
+.currency {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+}
+
+.input {
+  flex: 1;
+  /* A text input carries an intrinsic width of about 20 characters, which at
+     this font size forces the whole page wider than a small phone viewport. */
+  width: 100%;
+  min-width: 0;
+  padding: var(--space-16) 0;
+  border: 0;
+  background: transparent;
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-ink-subtle);
+  font-weight: var(--font-weight-medium);
+}
+
+.hint {
+  color: var(--color-ink-muted);
+  font-size: var(--font-size-14);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  color: var(--color-critical);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+}
+
+.errorIcon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.15rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-critical);
+  color: var(--color-surface);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.submit {
+  justify-self: start;
+  min-width: 16rem;
+  margin-top: var(--space-8);
+  padding: var(--space-20) var(--space-40);
+  border: 0;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    transform 120ms ease;
+}
+
+.submit:hover {
+  background-color: var(--color-ink-strong);
+}
+
+.submit:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .submit {
+    justify-self: stretch;
+    width: 100%;
+    /* The fixed minimum gives the CTA presence on a wide card; on narrow
+       screens it would force the whole page wider than the viewport. */
+    min-width: 0;
+    padding: var(--space-16) var(--space-24);
+  }
+
+  .input {
+    font-size: var(--font-size-20);
+  }
+}
